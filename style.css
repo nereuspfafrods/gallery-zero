@@ -1,0 +1,24 @@
+panel {
+  height: 50vh;
+  width: 100%;
+}
+.p1 {
+  background-color: rgb(47, 164, 41);
+}
+.p2 {
+  background-color: rgb(55, 21, 4);
+}
+.p3 {
+  background-color: rgb(255, 220, 23);
+}
+.p4 {
+  background-color: rgb(231, 150, 44);
+}
+.p5 {
+  background-color: rgb(235, 99, 75);
+}
+
+img.logo {
+  height: 50vh;
+  z-index: 1;
+}
