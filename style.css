@@ -1,6 +1,8 @@
-panel {
-  height: 100vh;
+.panel {
+  height: 30vh;
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 .p1 {
   background-color: rgb(47, 164, 41);
@@ -17,8 +19,35 @@ panel {
 .p5 {
   background-color: rgb(235, 99, 75);
 }
+.p6 {
+  background-color: rgb(100, 100, 100);
+}
 
 .logo {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: 25vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.logo.shake {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
 }
