@@ -3,6 +3,8 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 .p1 {
   background-color: rgb(47, 164, 41);
