@@ -32,10 +32,12 @@ body {
 
 .logo {
   width: 100%;
-  height: 25vh;
+  height: 30vh;
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
   cursor: pointer;
 }
 
@@ -58,11 +60,35 @@ body {
     transform: translateX(-5px);
   }
 }
+/* contact section */
+#contact {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(107, 107, 107);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#contact .info {
+  width: 30vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  object-fit: contain;
+}
 
 /*manifesto*/
 
 body#manifesto {
-  background-color: black;
+  background-color: white;
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -71,7 +97,7 @@ body#manifesto {
   width: 50vw;
   max-width: 50vw;
   height: 100vh;
-  color: white;
+  color: black;
   position: absolute;
   top: 0;
   right: 0;
