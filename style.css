@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 .panel {
   height: 30vh;
   width: 100%;
@@ -5,6 +9,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
+  margin: 0 0 10px 0;
 }
 .p1 {
   background-color: rgb(111, 28, 85);
@@ -16,7 +21,7 @@
   background-color: rgb(8, 102, 56);
 }
 .p4 {
-  background-color: rgb(184, 66, 66);
+  background-color: rgb(243, 55, 8);
 }
 .p5 {
   background-color: rgb(100, 100, 100);
