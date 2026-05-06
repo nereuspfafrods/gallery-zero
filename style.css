@@ -63,34 +63,38 @@ body {
 /* contact section */
 #contact {
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   background-color: rgb(107, 107, 107);
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 #contact .info {
-  width: 35%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1 1 280px;
+  max-width: 33%;
+  min-width: 260px;
   background-color: rgb(236, 236, 235);
   color: black;
-  margin: 2px;
-  border-radius: 8px;
-  object-fit: contain;
+  margin: 6px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
 }
 #contact .info h1 {
-  font-size: 2rem;
-  margin: 10px;
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
 }
 #contact .info p {
   font-size: 1rem;
-  margin: 0 10px 0 10px;
+  margin: 0 0 10px 0;
   padding: 0;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+#contact .info p#about {
+  margin-bottom: 0;
 }
 
 /*manifesto*/
@@ -156,11 +160,19 @@ body#manifesto {
   #manifesto div#container h1 {
     font-size: 2.4rem;
   }
+  #contact {
+    width: 100%;
+  }
+  #contact .info {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 260px;
+  }
   .info h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .info p {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -174,24 +186,26 @@ body#manifesto {
   #manifesto div#image {
     max-width: 100%;
   }
+
   .panel {
     height: 10vh;
   }
   .panel .logo {
     height: 10vh;
   }
+
   #contact {
-    height: 20vh;
     width: 100%;
   }
   #contact .info {
-    width: 90vw;
-    height: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: auto;
   }
   .info h1 {
     font-size: 1rem;
   }
   .info p {
-    font-size: 0.7rem;
+    font-size: 0.95rem;
   }
 }
