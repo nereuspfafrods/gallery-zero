@@ -111,12 +111,22 @@ body#manifesto {
   height: 100vh;
   color: black;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   top: 0;
   right: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
-
+#manifesto div#container img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+}
 #manifesto div#container p {
   font-size: 1rem;
   padding: 20px;
