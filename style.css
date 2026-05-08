@@ -60,6 +60,7 @@ body {
     transform: translateX(-5px);
   }
 }
+
 /* contact section */
 #contact {
   width: 100%;
@@ -96,8 +97,15 @@ body {
 #contact .info p#about {
   margin-bottom: 0;
 }
+
 /* calendar section */
-div#container#left {
+body#calendar {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+body#calendar div#container {
   width: 50vw;
   max-width: 50vw;
   height: 100vh;
@@ -112,9 +120,34 @@ div#container#left {
   overflow: hidden;
   box-sizing: border-box;
 }
+body#calendar div#container div#text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+body#calendar div#image {
+  width: 50vw;
+  max-width: 50vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body#calendar div#image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 /*manifesto*/
-
 body#manifesto {
   background-color: white;
   width: 100%;
