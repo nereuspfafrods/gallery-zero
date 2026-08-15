@@ -5,65 +5,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body.info {
-        background-color: white;
+      body {
+        background-color: rgb(137, 133, 133);
         width: 100%;
         height: 100vh;
         margin: 0;
       }
+      * {
+        box-sizing: border-box;
+      }
 
-     
+      /*nav bar*/
+      #nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+      }
+      .nav-item {
+        padding: 10px;
+        background-color: rgb(137, 133, 133);
+        text-align: center;
+      }
+      .nav-item a {
+        text-decoration: none;
+        color: black;
+        font-family: times new roman;
+      }
+      #nav div:hover {
+        background-color: #a14cad;
+      }
+      #nav div:hover a {
+        color: white;
+      }
+
+      /*slider*/
+      .slider-container {
+        max-height: 600px;
+        max-width: 80%;
+        position: relative;
+        overflow: hidden;
+        margin: 40px auto;
+      }
+
+      .mySlide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .mySlide {
+        display: none;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+      }
+
+      .cap {
+        color: #f2f2f2;
+        background-color: rgba(0, 0, 0, 0.7);
+        font-size: 16px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /*info*/
+      .info {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      /*media 1000px*/
+      @media (min-width: 1000px) {
+        .slider-container {
+          max-height: 700px;
+          max-width: 70%;
+        }
+      }
+
+      /*media 600px*/
+      @media (max-width: 600px) {
+        .nav-item a {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .nav-item {
+          padding: 5px;
+        }
+      }
     </style>
   </head>
   <body>
-   
-      <div id="nav">
-        <a id="home" href="index.htm">Home</a>
-        <a id="manifesto" href="manifesto.html">Manifesto</a>
-        <a id="cal" href="calendar.html">Calendar</a>
-        <a id="union" href="union.html">Student Union</a>
-        <a id="gar" href="garden.">Garden</a>
-        <a id="green" href="green.html">Green Office</a>
+    <div id="nav">
+      <div class="nav-item">
+        <a href="index.htm">Home</a>
+      </div>
+      <div class="nav-item">
+        <a href="calendar.html">Calendar</a>
+      </div>
+      <div class="nav-item">
+        <a href="manifesto.html">Manifesto</a>
+      </div>
+      <div class="nav-item">
+        <a href="http://kabkstudentunion.com">Student Union</a>
+      </div>
+      <div class="nav-item">
+        <a href="garden.html">Garden</a>
+      </div>
+      <div class="nav-item">
+        <a href="green.html">Green Office</a>
+      </div>
+      <div class="nav-item">
+        <a href="mushroom.html">Mushroom Radio</a>
       </div>
     </div>
-    <div id="contact">
-      <div class="info right">
-        <h1>Contact Us</h1>
-        <p>Email:</p>
-        <p>Phone:</p>
+
+    <!--slider-->
+    <div class="slider-container">
+      <div class="mySlide fade">
+        <img src="./assets/picute g0.png" alt="gallery 0" />
+        <div class="cap">Dreaming of Gallery Zero</div>
       </div>
-      <div class="info">
-        <h1>About</h1>
-        <p id="about">
-          Gallery Zero is a social and spatial project within the academy that
-          creates conditions for student-led initiatives to become visible,
-          connected, and active.<br /><br />
-          It emerges from the observation that many forms of self-organisation
-          already exist within the school, yet they lack space, presence, and
-          continuity.<br /><br />
-          Rather than designing a fixed object, it proposes a framework -
-          through sequences, rituals, and spatial elements - that enables
-          students to gather, organise, and take ownership. Gallery Zero is not
-          a finished space, but an evolving platform for agency.
-        </p>
+
+      <div class="mySlide fade">
+        <img src="./assets/cohub3.png" alt="gallery 0" />
+        <div class="cap">Getting veggies and fruits from Haagse Markt</div>
       </div>
-      <div class="info left">
-        <h1>Student inititives</h1>
-        <ul>
-          <li>
-            <p>Green Office<br /></p>
-          </li>
-          <li>
-            <p>Maker's Garden<br /></p>
-          </li>
-          <li>
-            <p>Student Union<br /></p>
-          </li>
-          <li>
-            <p>Mushroom Radio<br /></p>
-          </li>
-        </ul>
+
+      <div class="mySlide fade">
+        <img src="./assets/cohub4.png" alt="gallery 0" />
+        <div class="cap">Garden dinner x Mushroom Radio</div>
       </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/union/pic g02.png" alt="gallery 0" />
+        <div class="cap">Collective dinner with union members</div>
+      </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/garden/garden1.png" alt="gallery 0" />
+        <div class="cap">Freeing the soil</div>
+      </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/garden/garden4.png" alt="gallery 0" />
+        <div class="cap">Freeing the soil</div>
+      </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/cohub1.png" alt="gallery 0" />
+        <div class="cap">Planning the Mobile Kitchen</div>
+      </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/union/tabaria.png" alt="gallery 0" />
+        <div class="cap">Tabaria cafe x KABK Union x Mushroom Radio</div>
+      </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/union/tabaria2.png" alt="gallery 0" />
+        <div class="cap">Tabaria cafe x KABK Union x Mushroom Radio</div>
+      </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/mush/mushlaak.png" alt="gallery 0" />
+        <div class="cap">Mushroom Radio at Laak</div>
+      </div>
+
+      <div class="mySlide fade">
+        <img src="./assets/union/picture g03.png" alt="gallery 0" />
+        <div class="cap">SU Open Doors</div>
+      </div>
+
+      <!--buttons img-->
+      <div class="slider-buttons">
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+      </div>
+      <br />
     </div>
+
+    <div class="info">
+      <h1>About</h1>
+      <p id="about">
+        Gallery Zero is a social and spatial project within the academy that
+        creates conditions for student-led initiatives to become visible,
+        connected, and active.<br /><br />
+        It emerges from the observation that many forms of self-organisation
+        already exist within the school, yet they lack space, presence, and
+        continuity.<br /><br />
+        Rather than designing a fixed object, it proposes a framework - through
+        sequences, rituals, and spatial elements - that enables students to
+        gather, organise, and take ownership. Gallery Zero is not a finished
+        space, but an evolving platform for agency.
+      </p>
+    </div>
+
+    <div class="info">
+      <h1>Student inititives</h1>
+      <ul>
+        <li>
+          <p>Green Office<br /></p>
+        </li>
+        <li>
+          <p>Maker's Garden<br /></p>
+        </li>
+        <li>
+          <p>Student Union<br /></p>
+        </li>
+        <li>
+          <p>Mushroom Radio<br /></p>
+        </li>
+      </ul>
+    </div>
+
+    <!--script for slides-->
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlide");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
   </body>
 </html>
