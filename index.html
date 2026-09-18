@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery 0 and Student Initiatives</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div style="cursor: pointer" class="logo"></div>
+      <div class="mains">
+        <iframe name="iframe_a" title="web player" id="frame"></iframe>
+        <a href="./manifesto.html" target="iframe_a">
+          <section>
+            <img src="./assets/cohub4.png" alt="Gallery" />
+          </section>
+        </a>
+        <a href="./garden.html" target="iframe_a">
+          <section>
+            <img src="./assets/mush/mushlaak3.png" alt="Gallery" />
+          </section>
+        </a>
+        <a href="./manifesto.html" target="iframe_a">
+          <section>
+            <img src="./assets/cohub2.png" alt="Gallery" />
+          </section>
+        </a>
+        <a href="./manifesto.html" target="iframe_a">
+          <section>
+            <img src="./assets/cohub2.png" alt="Gallery" />
+          </section>
+        </a>
+      </div>
+    </div>
+    <script>
+      const iframe = document.getElementById("frame");
+      const sections = document.querySelectorAll("section");
+      const logo = document.querySelector(".logo");
+      const mainContainer = document.querySelector(".main-container");
+      const isDesktop = window.matchMedia("(min-width: 901px)");
+
+      const setIframePosition = (position) => {
+        const axis = isDesktop.matches
+          ? "X"
+          : "Y"; /*condition ? ifTrue : ifFalse (shorter alternative for if/else*/
+        iframe.style.transform = `translate${axis}(${position})`;
+      };
+
+      logo.addEventListener("click", () => {
+        mainContainer.classList.remove("is-open");
+        setIframePosition(isDesktop.matches ? "100%" : "100vh");
+      });
+      sections.forEach((section) => {
+        section.addEventListener("click", () => {
+          mainContainer.classList.add("is-open");
+          setIframePosition("0");
+        });
+      });
+    </script>
+  </body>
+</html>
