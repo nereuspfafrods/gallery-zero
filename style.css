@@ -2,6 +2,10 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: myFont;
+  src: url(/fonts/MarrSans-Regular.otf); /* url of the font */
+}
 body {
   margin: 0;
   padding: 0;
@@ -16,7 +20,7 @@ body {
 
 .main-container {
   background-color: black;
-  width: 560px;
+  width: 565px;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -26,7 +30,6 @@ body {
 }
 
 .logo {
-  margin: 5px;
   width: 80px;
   height: 100%;
   background-image: url("./assets/logos:graphics/galleryzero_logo.jpg");
@@ -45,7 +48,6 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   transition: width 0.5s ease-in-out;
-  border: 3px solid rgb(227, 124, 15);
 }
 
 section {
@@ -99,7 +101,7 @@ iframe {
 /* responsive */
 @media (min-width: 901px) {
   .main-container {
-    width: 560px;
+    width: 565px;
   }
 
   .mains {
@@ -109,11 +111,14 @@ iframe {
   section {
     width: 100%;
   }
-
+  iframe {
+    width: 50%;
+    transition: none;
+  }
   #frame {
+    transform: translateY(0);
     left: 50%;
     width: 50%;
-    transform: translateX(100%);
   }
 
   .main-container.is-open {
@@ -121,7 +126,7 @@ iframe {
   }
 
   .main-container.is-open .mains {
-    width: 900px;
+    width: 905px;
   }
 
   .main-container.is-open section {
@@ -134,5 +139,16 @@ iframe {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  .main-container {
+    width: 385px;
+  }
+
+  .mains {
+    width: 300px;
+  }
+
+  section {
+    height: 81px;
+  }
 }
