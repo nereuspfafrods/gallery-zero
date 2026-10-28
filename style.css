@@ -98,6 +98,8 @@ iframe {
   -o-transition: transform 1s ease-in-out;
 }
 
+/* poster pages */
+
 /* responsive */
 @media (min-width: 901px) {
   .main-container {
