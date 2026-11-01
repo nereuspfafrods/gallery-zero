@@ -9,11 +9,11 @@
   <body>
     <div class="main-container">
       <div style="cursor: pointer" class="logo"></div>
+
       <div class="web_player">
         <iframe name="iframe_a" title="web player" id="frame"></iframe>
       </div>
-
-      <div class="mains">
+      <div class="navbar">
         <a href="./htmls/manifesto.html" target="iframe_a">
           <section>
             <img
@@ -92,50 +92,11 @@
         </a>
         <a href="./htmls/contact.html" target="iframe_a">
           <section>
-            <img src="./assets/manifesto_kabk.png" alt="Gallery" />
+            <img src="./assets/logos:graphics/next_event.png" alt="Gallery" />
           </section>
         </a>
       </div>
     </div>
-    <script>
-      const iframe = document.getElementById("frame");
-      const sections = document.querySelectorAll("section");
-      const logo = document.querySelector(".logo");
-      const mainContainer = document.querySelector(".main-container");
-      const mains = document.querySelector(".mains");
-      const isDesktop = window.matchMedia("(min-width: 901px)");
-
-      const setIframeHeight = () => {
-        iframe.style.height = `${mains.scrollHeight}px`;
-      };
-
-      const setIframePosition = (position) => {
-        const axis = isDesktop.matches
-          ? "X"
-          : "Y"; /*condition ? ifTrue : ifFalse (shorter alternative for if/else*/
-        iframe.style.transform = `translate${axis}(${position})`;
-      };
-
-      logo.addEventListener("click", () => {
-        mainContainer.classList.remove("is-open");
-        iframe.classList.remove("is-visible");
-        setIframePosition(isDesktop.matches ? "100%" : "100vh");
-        setIframeHeight();
-      });
-      sections.forEach((section) => {
-        section.addEventListener("click", () => {
-          mainContainer.classList.add("is-open");
-          iframe.classList.add("is-visible");
-          setIframePosition("0");
-          setIframeHeight();
-        });
-      });
-      window.addEventListener("resize", setIframeHeight);
-      new MutationObserver(setIframeHeight).observe(mains, {
-        childList: true,
-        subtree: true,
-      });
-      setIframeHeight();
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
